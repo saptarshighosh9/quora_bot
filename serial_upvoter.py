@@ -41,7 +41,7 @@ time.sleep(2)
 while 1:
 	a = driver.execute_script("return document.body.scrollHeight;")
 	print a
-	t_end = time.time() + int(parameters["loading_time_seconds"])								
+	t_end = time.time() + int(parameters["timeout_seconds"])								
 	while time.time() < t_end:
 		driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 	b = driver.execute_script("return document.body.scrollHeight;")
